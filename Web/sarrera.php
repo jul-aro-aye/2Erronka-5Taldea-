@@ -11,6 +11,13 @@
 
 <body>
     <?php
+    session_start();
+
+    if (!isset($_SESSION['username'])) {
+        // header('Location: login.php');  // Redirige a la página de login si no está logueado
+        // exit();
+    }
+    
     require_once "header.php";
     echo sortuMenua();
     ?>

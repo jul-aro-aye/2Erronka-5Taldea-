@@ -1,6 +1,10 @@
 <?php
 function sortuMenua()
 {
+    // session_start();
+
+    // $logeatuta = isset($_SESSION['erabiltzailea']);
+
     ?>
     <header>
         <div class="header">
@@ -18,15 +22,15 @@ function sortuMenua()
             </div>
             <img src="Logoa_EkoTekno.jpg" id="logoa" alt="Logo EkoTekno">
             <div class="kontuak">
-                <a href="erregistroOrria.php"><i class="fa fa-user-plus" id="erregistratu"></i></a>
                 <a href="saioaHasi.php"><i class="fa fa-user" id="login"></i></i></a>
-                
+                <a href="erregistroOrria.php"><i class="fa fa-user-plus" id="erregistratu"></i></a>
+
             </div>
         </div>
 
     </header>
 
-    <h1>EkoTekno</h1>
+    <h1 id="enpresaIzena">EkoTekno</h1>
     <script>
         function mugikorNabigazioa() {
             var ilara = document.getElementById("aukerak");

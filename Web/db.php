@@ -1,17 +1,20 @@
-<?php 
+<?php
 
-$zerbitzaria = "localhost";
-$erab = "root";
-$pasa = "1MG2024";
-$dbIzena = "erronka2";
+function konexioaSortu()
+{
 
-$conn = new mysqli($zerbitzaria, $erab, $pasa, $dbIzena);
+    $zerbitzaria = "localhost";
+    $erab = "root";
+    $pasa = "1MG2024";
+    $dbIzena = "erronka2";
+
+    $conn = new mysqli($zerbitzaria, $erab, $pasa, $dbIzena);
 
 
-if ($conn->connect_error) {
-    die("Konexio arazoak" . $conn->connect_error);
+    if ($conn->connect_error) {
+        die("Konexio arazoak" . $conn->connect_error);
+    }
+
+    return $conn;
 }
-
-return $conn;
-
 ?>
