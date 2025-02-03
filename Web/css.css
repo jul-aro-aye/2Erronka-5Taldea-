@@ -4,6 +4,10 @@
         margin: 0;
     }
 
+    #enpresaIzena {
+        text-align: center;
+    }
+
     a {
 
         text-decoration: none;
@@ -33,29 +37,32 @@
     #irudia {
         font-size: 50px;
     }
-    
+
     #logoa {
         width: 60px;
         height: 60px;
         margin: auto;
     }
 
-    #erregistratu {
+    #login {
         font-size: 35px;
         float: right;
     }
-    #login {
+
+    #erregistratu {
         padding-left: 5px;
         font-size: 35px;
     }
+
     form {
         padding: 20px;
     }
 
     #erregistroa {
-        text-align: center;  
-          
+        text-align: center;
+
     }
+
     #erregistratuBotoia {
         padding: 5px;
         background-color: lightgreen;
@@ -65,8 +72,29 @@
         border: 1px solid black;
 
     }
+
     label {
         font-size: 16px;
+    }
+
+    .kontuak {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #divBotoia {
+        text-align: center;
+    }
+
+    #saioaBotoia {
+        background-color: lightblue;
+        height: 30px;
+        width: 40%;
+    }
+
+    #saioaHasiForm {
+        padding-left: 20px;
     }
 
 }
