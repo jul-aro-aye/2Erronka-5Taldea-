@@ -48,4 +48,25 @@
         padding-left: 5px;
         font-size: 35px;
     }
+    form {
+        padding: 20px;
+    }
+
+    #erregistroa {
+        text-align: center;  
+          
+    }
+    #erregistratuBotoia {
+        padding: 5px;
+        background-color: lightgreen;
+    }
+
+    input {
+        border: 1px solid black;
+
+    }
+    label {
+        font-size: 16px;
+    }
+
 }
