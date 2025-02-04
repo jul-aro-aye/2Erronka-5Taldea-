@@ -14,9 +14,9 @@ function sortuMenua()
             </a>
             <div id="aukerak">
                 <ul id="nabigazioBarra">
-                    <li><a class="sarrera" href="sarrera.php">Sarrera</a></li>
-                    <li><a class="produktuak" href="produktuak.php">Produktuak</a></li>
-                    <li><a class="hornitzailea" href="form.php">Hornitzaile bihurtu</a></li>
+                    <li><a class="sarrera" href="sarrera.php">Sarrera</a></li><br>
+                    <li><a class="produktuak" href="produktuak.php">Produktuak</a></li><br>
+                    <li><a class="hornitzailea" href="form.php">Hornitzaile bihurtu</a></li><br>
                     <li><a class="berriak" href="berriak.php">Berriak</a></li>
                 </ul>
             </div>
