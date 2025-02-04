@@ -4,8 +4,11 @@
         margin: 0;
     }
 
-    a {
+    #enpresaIzena {
+        text-align: center;
+    }
 
+    a {
         text-decoration: none;
         color: black;
     }
@@ -18,34 +21,86 @@
 
     #aukerak {
         display: none;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background-color: lightgray;
+        z-index: 1000;
     }
 
     .header {
         background-color: lightgray;
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
+        position: relative; 
     }
 
     #nabigazioBarra li {
         margin: 10px 0;
+        text-align: center;
     }
+    
 
     #irudia {
         font-size: 50px;
+        padding-left: 10%;
     }
-    
+
     #logoa {
         width: 60px;
         height: 60px;
         margin: auto;
     }
 
-    #erregistratu {
+    #login {
         font-size: 35px;
         float: right;
     }
-    #login {
+
+    #erregistratu {
         padding-left: 5px;
         font-size: 35px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    #erregistroa {
+        text-align: center;
+    }
+
+    #erregistratuBotoia {
+        padding: 5px;
+        background-color: lightgreen;
+    }
+
+    input {
+        border: 1px solid black;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    .kontuak {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #divBotoia {
+        text-align: center;
+    }
+
+    #saioaBotoia {
+        background-color: lightblue;
+        height: 30px;
+        width: 40%;
+    }
+
+    #saioaHasiForm {
+        padding-left: 20px;
     }
 }
