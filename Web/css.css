@@ -103,4 +103,47 @@
     #saioaHasiForm {
         padding-left: 20px;
     }
+
+    #produktuak {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        justify-content: center;
+    }
+    .produktua {
+        border: 1px solid #ddd;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        width: 200px;
+        text-align: center;
+        background: #fff;
+    }
+    .produktua h3 {
+        margin: 0;
+        font-size: 18px;
+    }
+    .produktua p {
+        color: #333;
+        font-size: 16px;
+        margin: 10px 0 0;
+    }
+    #erosketaBotoia{
+        background-color: black;
+        color:white;
+        border-radius: 5px;
+    }
+    #filtro{
+       text-align: center;
+    }
+    #botoia{
+        border-radius: 5px;
+        border: 1px solid grey;
+    }
+    #mota{
+        border-radius: 5px;
+        border: 1px solid grey;
+    }
+   
 }
