@@ -21,6 +21,7 @@
     require_once "../header.php";
     ?>
     <div class="content-osoa">
+    <h1 id="enpresaIzena">EkoTekno</h1>
 
         <div id="zerAurkitu">
             <h3 class="sarreraTitulua1">Zer aurkituko duzu EkoTeknon?</h3>

@@ -16,6 +16,7 @@
 
     ?>
     <div class="content-osoa">
+        <h1 id="enpresaIzena">EkoTekno</h1>
 
 
         <form id="hornitzaileForm">
@@ -36,59 +37,60 @@
             </div>
 
         </form>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-
-    <script>
-        $(document).ready(function () {
 
 
-            $('#hornitzaileBihurtzekoBotoia').on('click', function (e) {
-                e.preventDefault();
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
-                var enpresaizenval = $("#enpresaIzena").val();
-                var kokapenaval = $("#kokapena").val();
-                var banatzaileval = $("#banatzaileKop").val();
-                var telefonoval = $("#telefono").val();
-                var emailval = $("#emaila").val();
+        <script>
+            $(document).ready(function () {
 
-                $.ajax({
-                    "url": "hornitzaileaGehitu.php",
-                    "method": "POST",
-                    "data": {
-                        "akzioa": "hornitzaileaGehitu",
-                        "enpresaIzena": enpresaizenval,
-                        "kokapena": kokapenaval,
-                        "banatzaileKop": banatzaileval,
-                        "telefono": telefonoval,
-                        "emaila": emailval,
-                    }
-                })
-                    .done(function (hornitzailea) {
-                        var hornitzailea = JSON.parse(hornitzailea);
-                        if (hornitzailea.status == "ok") {
-                            alert("Hornitzaile bihurtu zara!");
-                            window.location.href = "hornitzaileBihurtu.php";
-                        } else {
-                            alert("Hornitzaile bihurtzeko datuak ez dira zuzenak");
+
+                $('#hornitzaileBihurtzekoBotoia').on('click', function (e) {
+                    e.preventDefault();
+
+                    var enpresaizenval = $("#enpresaIzena").val();
+                    var kokapenaval = $("#kokapena").val();
+                    var banatzaileval = $("#banatzaileKop").val();
+                    var telefonoval = $("#telefono").val();
+                    var emailval = $("#emaila").val();
+
+                    $.ajax({
+                        "url": "hornitzaileaGehitu.php",
+                        "method": "POST",
+                        "data": {
+                            "akzioa": "hornitzaileaGehitu",
+                            "enpresaIzena": enpresaizenval,
+                            "kokapena": kokapenaval,
+                            "banatzaileKop": banatzaileval,
+                            "telefono": telefonoval,
+                            "emaila": emailval,
                         }
-
                     })
-                    .fail(function () {
-                        alert("Errorea egon da eskaeran: ");
-                    })
+                        .done(function (hornitzailea) {
+                            var hornitzailea = JSON.parse(hornitzailea);
+                            if (hornitzailea.status == "ok") {
+                                alert("Hornitzaile bihurtu zara!");
+                                window.location.href = "hornitzaileBihurtu.php";
+                            } else {
+                                alert("Hornitzaile bihurtzeko datuak ez dira zuzenak");
+                            }
+
+                        })
+                        .fail(function () {
+                            alert("Errorea egon da eskaeran: ");
+                        })
 
 
 
-            });
-        }); 
-    </script>
-
+                });
+            }); 
+        </script>
+    </div>
     <?php
     require_once "../footer.php";
 
     ?>
+
 
 
 </body>

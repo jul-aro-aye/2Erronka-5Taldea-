@@ -13,8 +13,8 @@
     require_once("../header.php");
     ?>
     <div class="content-osoa">
-
-
+    <h1 id="enpresaIzena">EkoTekno</h1>
+    <br><br>
     <form id="erregistroForm">
         <label for="izenAbizenak">Izen-Abizenak:</label>
         <input type="text" id="izenAbizenak" name="izenAbizenak" required placeholder="Izena Abizena Abizena"> <br><br>

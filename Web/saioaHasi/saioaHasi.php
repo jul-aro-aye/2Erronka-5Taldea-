@@ -19,6 +19,7 @@
 
     ?>
     <div class="content-osoa">
+    <h1 id="enpresaIzena">EkoTekno</h1>
 
         <form action="saioaHasi.php" method="POST" id="saioaHasiForm">
             <label for="erab">Erabiltzailea</label>

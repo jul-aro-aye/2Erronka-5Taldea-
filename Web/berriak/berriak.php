@@ -30,6 +30,7 @@ $irudiak = [
 
 <body>
     <div class="content-osoa">
+        <h1 id="enpresaIzena">EkoTekno</h1>
         <div id="berriak">
 
             <?php
@@ -40,7 +41,7 @@ $irudiak = [
 
                     $berrienIrudi = isset($irudiak[$berrienIzenburu]) ? $irudiak[$berrienIzenburu] : "img/default.jpg";
                     echo "<div class='berria'>";
-                    echo "<img src='" . $berrienIrudi . "' height='150px' width='150px' alt='" . htmlspecialchars($berrienIzenburu) . "'>";
+                    echo "<img src='" . $berrienIrudi . "' id='berrienIrudiak' height='150px' width='150px' alt='Berrien irudiak'" . htmlspecialchars($berrienIzenburu) . "'>";
                     echo "<br><br>";
                     echo "<h3>" . htmlspecialchars($row["izenburua"]) . "</h3>";
                     echo "<p>" . htmlspecialchars($row["textua"]) . "</p>";
