@@ -225,6 +225,11 @@
         background-color: lightgreen;
     }
 
+    #saioaItxiLink {
+        color: #3907ea;
+        text-decoration: underline;
+    }
+
     @media screen and (min-width: 480px) {
 
         .header {
@@ -315,5 +320,3 @@
         }
 
     }
-
-    

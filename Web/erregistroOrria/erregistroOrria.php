@@ -68,14 +68,14 @@
                         "pasahitza": pasahitzval,
                         "telefono": telefonoval,
                         "emaila": emailval,
-                        "jaio_urtea": jaioval
+                        "jaio_urtea": jaioval,
                     }
                 })
                     .done(function (erregistroa) {
                         var erregistroa = JSON.parse(erregistroa);
                         if (erregistroa.status == "ok") {
                             alert("Erregistroa ondo egin da");
-                            window.location.href = "saioaHasi.php";
+                            window.location.href = "../saioaHasi/saioaHasi.php";
                         } else {
                             alert("Erregistroa ez da ondo egin");
                         }

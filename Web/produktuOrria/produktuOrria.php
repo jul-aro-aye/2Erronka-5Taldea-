@@ -66,6 +66,7 @@
     <body>
 
         <div class="content-osoa">
+        <h1 id="enpresaIzena">EkoTekno</h1>
             <form id="filtro" method="GET" action="produktuOrria.php">
                 <input type="text" name="izenaBilatu" placeholder="Produktuaren izena bilatu..." /><br>
 
@@ -142,6 +143,8 @@
             }
 
             document.addEventListener("DOMContentLoaded", eguneratuKarritoa);
+
+            
         </script>
         <?php require_once("../footer.php"); ?>
     </body>

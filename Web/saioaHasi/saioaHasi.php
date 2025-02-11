@@ -19,7 +19,7 @@
 
     ?>
     <div class="content-osoa">
-    <h1 id="enpresaIzena">EkoTekno</h1>
+        <h1 id="enpresaIzena">EkoTekno</h1>
 
         <form action="saioaHasi.php" method="POST" id="saioaHasiForm">
             <label for="erab">Erabiltzailea</label>
@@ -68,6 +68,7 @@
 
                         var saioKop = JSON.parse(konprobazioa);
                         if (saioKop.kopurua > 0) {
+                            alert("Saioa hasi da");
                             window.history.back();
                         } else {
                             alert("Erabiltzaile eta pasahitz okerrak, saiatu berriro");
@@ -77,10 +78,22 @@
                     .fail(function () {
                         alert("gaizki joan da");
                     })
+
+
             });
         });
 
     </script>
+
+    <script>
+        $(document).ready(function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('logout')) {
+                alert('Saioa amaitu duzu.');
+            }
+        });
+    </script>
+
 
     <?php
 

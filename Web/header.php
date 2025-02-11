@@ -1,3 +1,7 @@
+<?php
+require_once("saioaHasi/session.php");
+
+?>
 <div class="header">
 
     <a href="javascript:void(0);" class="ikonoa" onclick="mugikorNabigazioa()">
@@ -7,13 +11,15 @@
         <ul id="nabigazioBarra">
             <li><a class="sarrera" href="../sarrera/sarrera.php">Sarrera</a></li><br>
             <li><a class="produktuak" href="../produktuOrria/produktuOrria.php">Produktuak</a></li><br>
-            <li><a class="hornitzailea" href="../hornitzaileBihurtu/hornitzaileBihurtu.php">Hornitzaile bihurtu</a></li><br>
+            <li><a class="hornitzailea" href="../hornitzaileBihurtu/hornitzaileBihurtu.php">Hornitzaile bihurtu</a></li>
+            <br>
             <li><a class="berriak" href="../berriak/berriak.php">Berriak</a></li>
         </ul>
     </div>
-    
+
     <div class="kontuak">
-        <a href="../saioaHasi/saioaHasi.php"><i class="fa fa-user" id="login"></i></i></a>
+        <a href="../saioaHasi/saioaHasi.php"><i class="fa fa-user" id="login"></i></a>
+        <a href="../saioaHasi/saioaItxi.php" id="saioaItxiLink">Saioa Itxi</a>
         <img src="../euskera.png" id="euskera" alt="Euskera">
         <img src="../ingelesa.jpg" id="ingelesa" alt="Ingelesa">
     </div>

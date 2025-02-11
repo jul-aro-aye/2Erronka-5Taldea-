@@ -2,7 +2,6 @@
 
 <head>
     <?php
-    session_start();
 
     // if (!isset($_SESSION['username'])) {
 //     // header('Location: login.php');  // Redirige a la página de login si no está logueado

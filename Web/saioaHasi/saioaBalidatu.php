@@ -1,6 +1,6 @@
 <?php
 
-require_once("db.php");
+require_once("../db.php");
 
 if (isset($_GET["erabiltzailea"]) && !empty($_GET["erabiltzailea"])) { // erabiltzailea parametroa dagoela eta hutsa ez dela konprobatzen du
     $erabiltzailea = $_GET["erabiltzailea"]; // balioa aldagaiean gordetzen du
