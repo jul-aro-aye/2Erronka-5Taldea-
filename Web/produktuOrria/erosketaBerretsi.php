@@ -24,10 +24,10 @@ $kopurua = json_encode($data["karritoa"]);
 // Insertar todo en una sola fila
 $sql = "INSERT INTO eskaera (kopurua,data,Bezeroa_idBezeroa) VALUES (?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("iss", $Bezeroa_idBezeroa, $data, $kopurua);
+$stmt->bind_param( $kopurua, $data, $Bezeroa_idBezeroa);
 
 if ($stmt->execute()) {
-    echo json_encode(["success" => "Erosketa gorde da!", "pedido_id" => $stmt->insert_id]);
+    echo json_encode(["success" => "Erosketa gorde da!", "id" => $stmt->insert_id]);
 } else {
     echo json_encode(["error" => "Errorea erosketa gordetzean."]);
 }

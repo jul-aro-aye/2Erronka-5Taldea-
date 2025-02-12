@@ -4,7 +4,7 @@ require_once("../db.php");
 
 if (isset($_GET["erabiltzailea"]) && isset($_GET["pasahitza"])) {
     $erabiltzailea = $_GET["erabiltzailea"];
-    $pasahitza = $_GET["pasahitza"];
+    $pasahitza = $_GET["pasahitza"];    
 
     $conn = konexioaSortu();
     $sql = "SELECT erabiltzailea FROM bezeroa WHERE erabiltzailea=? AND pasahitza=?";
