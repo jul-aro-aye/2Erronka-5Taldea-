@@ -20,7 +20,7 @@
     require_once "../header.php";
     ?>
     <div class="content-osoa">
-    <h1 id="enpresaIzena">EkoTekno</h1>
+        <h1 id="enpresaIzena">EkoTekno</h1>
 
         <div id="zerAurkitu">
             <h3 class="sarreraTitulua1">Zer aurkituko duzu EkoTeknon?</h3>
@@ -30,10 +30,11 @@
             <ul id="zerAurkituLista">
                 <li>Ordenagailuak eta osagarriak – Eramangarriak, mahaigaineko PC-ak, monitoreak, teklatuak eta gehiago.
                 </li>
-                <li>Smartphone-ak eta osagarriak – Azken modeloak, fundak, kargagailuak eta gailu adimendunak.</li>
+                <li>Smartphone-ak eta osagarriak – Azken modeloak, fundak, kargagailuak eta gailu adimendunak.
+                </li>
                 <li>Gadget-ak eta gailu adimendunak – Smartwatch-ak, entzungailuak, bozgorailu adimendunak eta domotika.
                 </li>
-                <li> Osagaiak eta gaming-a – Txartel grafikoak, prozesadoreak, gaming-aulkiak eta zure esperientzia
+                <li>Osagaiak eta gaming-a – Txartel grafikoak, prozesadoreak, gaming-aulkiak eta zure esperientzia
                     hobetzeko behar duzun guztia.</li>
             </ul>
         </div>
@@ -44,7 +45,7 @@
                 height="200px" ;>
             <p class="konpromisoaTextua">EkoTekno-n, teknologiaren zaleak gara eta zerbitzu hurbila eta fidagarria
                 eskaintzea gustatzen zaigu. Zure behar eta aurrekontura egokitutako produktua aurkitzen lagunduko
-                dizugu.
+                dizugu. Gure bezeroekin dauzkagun konpromisoa da gure lehentasuna eta zure iritzia gurekin partekatzea. 
             </p>
 
         </div>

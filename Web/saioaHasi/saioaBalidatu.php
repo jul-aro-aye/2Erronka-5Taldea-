@@ -1,46 +1,23 @@
 <?php
-
+session_start();
 require_once("../db.php");
 
-if (isset($_GET["erabiltzailea"]) && !empty($_GET["erabiltzailea"])) { // erabiltzailea parametroa dagoela eta hutsa ez dela konprobatzen du
-    $erabiltzailea = $_GET["erabiltzailea"]; // balioa aldagaiean gordetzen du
-}
-
-if (isset($_GET["pasahitza"]) && !empty($_GET["pasahitza"])) { // pasahitza parametroa dagoela eta hutsa ez dela konprobatzen du
-    $pasahitza = $_GET["pasahitza"]; // balioa aldagaiean gordetzen du
-}
-
-if ($_GET["akzioa"] == "konprobatuSaioa") {
+if (isset($_GET["erabiltzailea"]) && isset($_GET["pasahitza"])) {
+    $erabiltzailea = $_GET["erabiltzailea"];
+    $pasahitza = $_GET["pasahitza"];
 
     $conn = konexioaSortu();
-
-    $sql = "SELECT erabiltzailea, pasahitza FROM bezeroa WHERE erabiltzailea=\"$erabiltzailea\" AND pasahitza=\"$pasahitza\"";
-    $result = $conn->query($sql);
-
-    if ($result === false) { // Kontsultak errore bat duen konprobatzen du
-        echo "Arazoa kontsulta egitean: " . $conn->error; // Errorearen mezua erakusten da.ç
-        die(); // Prozesua amaitzen du
-    }
-
-    $saioa = [];
+    $sql = "SELECT erabiltzailea FROM bezeroa WHERE erabiltzailea=? AND pasahitza=?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $erabiltzailea, $pasahitza);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows > 0) {
-
-        $counter = 0;
-
-        while ($row = $result->fetch_assoc()) {
-            $saioa[$counter] = ["erabiltzailea" => $row["erabiltzailea"], "pasahitza" => $row["pasahitza"]];
-            $counter++;
-        }
-
-        $saioa["kopurua"] = $counter;
-
-        echo json_encode($saioa);
-        die;
-
+        $_SESSION['erabiltzailea'] = $erabiltzailea; 
+        echo json_encode(["kopurua" => 1, "redirect" => "sarrera.php"]); 
     } else {
-        echo json_encode($saioa);
-        die;
+        echo json_encode(["kopurua" => 0]);
     }
 
 }

@@ -44,15 +44,31 @@ require_once("../header.php");
                 }
 
                 window.berretsiErosketa = function () {
+                    let karritoa = JSON.parse(localStorage.getItem("karritoa")) || [];
+
                     if (karritoa.length === 0) {
                         alert("Ez dago produkturik karritoan.");
                         return;
                     }
 
-                    alert("Eskerrik asko zure erosketagatik! ");
-                    localStorage.removeItem("karritoa");
-                    window.location.href = "produktuOrria.php";
+                    fetch("erosketaBerretsi.php", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ karritoa })
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                alert("Eskerrik asko zure erosketagatik!");
+                                localStorage.removeItem("karritoa"); // Vaciar carrito
+                                window.location.href = "produktuOrria.php"; // Redirigir a productos
+                            } else {
+                                alert("Errorea: " + data.error);
+                            }
+                        })
+                        .catch(error => console.error("Errorea bidaltzean:", error));
                 };
+
 
                 erakutsiErosketa();
             });
