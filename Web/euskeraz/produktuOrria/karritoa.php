@@ -20,42 +20,50 @@ require_once("../header.php");
         <div id="karritoa-edukia"></div>
         <br>
         <div id="karrito-botoiak">
-            <button id="erosi" onclick="erosiProduktuak()">Erosi</button>
+            <button id="erosi">Erosi</button>
         </div>
 
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                let karritoaEdukia = document.getElementById("karritoa-edukia");
+            $(document).ready(function () {
+                let $karritoaEdukia = $("#karritoa-edukia");
                 let karritoa = JSON.parse(localStorage.getItem("karritoa")) || [];
 
                 function erakutsiKarritoa() {
-                    karritoaEdukia.innerHTML = "";
+                    $karritoaEdukia.empty();
                     if (karritoa.length === 0) {
-                        karritoaEdukia.innerHTML = "<p>Karritoa hutsik dago.</p>";
+                        $karritoaEdukia.html("<p>Karritoa hutsik dago.</p>");
                         return;
                     }
                     karritoa.forEach((produktua, index) => {
-                        let produktuaDiv = document.createElement("div");
-                        produktuaDiv.innerHTML = `
+                        let produktuaDiv = $("<div>").html(`
                 <span>${produktua.izena} - $${produktua.prezioa} x ${produktua.kopurua}</span>
-                <button onclick="ezabatuProduktua(${index})">Ezabatu</button>
-            `;
-                        karritoaEdukia.appendChild(produktuaDiv);
+                <button class="ezabatu" data-index="${index}">Ezabatu</button>
+            `);
+                        $karritoaEdukia.append(produktuaDiv);
                     });
                 }
 
-                window.ezabatuProduktua = function (index) {
+                $("#erosi").click(function () {
+                    erakutsiKarritoa();
+                });
+
+                $(document).on("click", ".ezabatu", function () {
+                    let index = $(this).data("index");
                     karritoa.splice(index, 1);
                     localStorage.setItem("karritoa", JSON.stringify(karritoa));
                     erakutsiKarritoa();
-                };
+                });
 
-                window.erosiProduktuak = function () {
-                    window.location.href = "ordaindu.php"; // Página de pago
-                };
+                $("#erosi").click(function () {
+                    window.location.href = "ordaindu.php"; 
+                });
 
                 erakutsiKarritoa();
             });
+
+
         </script>
     </div>
 

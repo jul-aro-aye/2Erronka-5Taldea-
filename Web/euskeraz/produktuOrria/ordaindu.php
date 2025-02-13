@@ -70,8 +70,8 @@ require_once("../header.php");
                         data = JSON.parse(data);
                         if (data.success) {
                             alert("Eskerrik asko zure erosketagatik!");
-                            localStorage.removeItem("karritoa"); // Vaciar carrito
-                            window.location.href = "produktuOrria.php"; // Redirigir a productos
+                            localStorage.removeItem("karritoa"); 
+                            window.location.href = "produktuOrria.php"; 
                         } else {
                             alert("Errorea: " + data.error);
                         }
