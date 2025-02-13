@@ -5,7 +5,7 @@ require_once("../header.php");
 <html>
 
 <head>
-    <title>Zure Karritoa</title>
+    <title>Your cart</title>
     <link rel="stylesheet" href="karritoa.css">
     <?php require_once("../head.php"); ?>
 </head>
@@ -16,11 +16,11 @@ require_once("../header.php");
         <h1 id="enpresaIzena">EkoTekno</h1>
         <br><br>
 
-        <h2 id="zureKarritoaTitulua">Zure Karritoa</h2>
+        <h2 id="zureKarritoaTitulua">Your cart</h2>
         <div id="karritoa-edukia"></div>
         <br>
         <div id="karrito-botoiak">
-            <button id="erosi">Erosi</button>
+            <button id="erosi">Buy</button>
         </div>
 
 
@@ -39,7 +39,7 @@ require_once("../header.php");
                     karritoa.forEach((produktua, index) => {
                         let produktuaDiv = $("<div>").html(`
                 <span>${produktua.izena} - $${produktua.prezioa} x ${produktua.kopurua}</span>
-                <button class="ezabatu" data-index="${index}">Ezabatu</button>
+                <button class="ezabatu" data-index="${index}">Delete</button>
             `);
                         $karritoaEdukia.append(produktuaDiv);
                     });

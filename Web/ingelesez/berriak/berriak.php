@@ -7,13 +7,13 @@ require_once("../db.php");
 $conn = konexioaSortu();
 
 
-$sql = "SELECT izenburua, textua, data FROM berria";
+$sql = "SELECT title, text, data FROM berria";
 $result = $conn->query($sql);
 
 $irudiak = [
-    "EkoTekno aurkezten du bere lehen mugikor ekologikoa" => "../MugikorEkologikoa.jpg",
-    "EkoTekno-k eguzki-kargagailu adimenduna merkaturatu du" => "../Eguzki-kargagailuAdimenduna.jpg",
-    "EkoTekno eta AI: adimen artifizial jasangarria garatzen" => "../AI.jpg",
+    "EkoTekno introduces its first eco-friendly smartphone." => "../MugikorEkologikoa.jpg",
+    "EkoTekno has launched a smart solar charger." => "../Eguzki-kargagailuAdimenduna.jpg",
+    "EkoTekno and AI: Developing Sustainable Artificial Intelligence" => "../AI.jpg",
 
 ]
 
@@ -24,7 +24,7 @@ $irudiak = [
     <?php
     require_once "../head.php";
     ?>
-    <title>Berriak</title>
+    <title>News</title>
 
 </head>
 
@@ -36,20 +36,20 @@ $irudiak = [
             <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    $berrienIzenburu = $row["izenburua"];
+                    $berrienIzenburu = $row["title"];
 
 
                     $berrienIrudi = isset($irudiak[$berrienIzenburu]) ? $irudiak[$berrienIzenburu] : "img/default.jpg";
                     echo "<div class='berria'>";
                     echo "<img src='" . $berrienIrudi . "' id='berrienIrudiak' height='150px' width='150px' alt='Berrien irudiak'" . htmlspecialchars($berrienIzenburu) . "'>";
                     echo "<br><br>";
-                    echo "<h3>" . htmlspecialchars($row["izenburua"]) . "</h3>";
-                    echo "<p>" . htmlspecialchars($row["textua"]) . "</p>";
+                    echo "<h3>" . htmlspecialchars($row["title"]) . "</h3>";
+                    echo "<p>" . htmlspecialchars($row["text"]) . "</p>";
                     echo "<p>" . htmlspecialchars($row["data"]) . "</p>";
                     echo "</div>";
                 }
             } else {
-                echo "<p>Ez daude produkturik.</p>";
+                echo "<p>There isn´t news.</p>";
             }
 
 

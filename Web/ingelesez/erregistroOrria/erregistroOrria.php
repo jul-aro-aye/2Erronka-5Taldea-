@@ -5,7 +5,7 @@
     require_once("../head.php");
     ?>
 
-    <title>Erregistroa</title>
+    <title>Sign In</title>
 </head>
 
 <body>
@@ -16,27 +16,27 @@
     <h1 id="enpresaIzena">EkoTekno</h1>
     <br><br>
     <form id="erregistroForm">
-        <label for="izenAbizenak">Izen-Abizenak:</label>
-        <input type="text" id="izenAbizenak" name="izenAbizenak" required placeholder="Izena Abizena Abizena"> <br><br>
-        <label for="erabiltzailea">Erabiltzailea:</label>
+        <label for="izenAbizenak">Name-Lastnames:</label>
+        <input type="text" id="izenAbizenak" name="izenAbizenak" required placeholder="Name Lastname Lastname"> <br><br>
+        <label for="erabiltzailea">User:</label>
         <input type="text" id="erabiltzailea" name="erabiltzailea" required pattern="^[a-z]{3}_[a-z]{3}_[a-z]{3}$"
             title="Erabiltzailearen formatua ez da okerra, formatu egokia (xxx_xxx_xxx) da." placeholder="xxx_xxx_xxx">
         <br><br>
-        <label for="pasahitza">Pasahitza:</label>
+        <label for="pasahitza">Password:</label>
         <input type="password" id="pasahitza" name="pasahitza" required
             pattern="^[a-zA-Z0-9!@#$%^&*()_+={}[\]:;<>,.?/-]{1,8}$"
             title="8 karakter maximo eduki behar ditu, letrak, simbolo eta zenbakiak erabiliz"> <br><br>
-        <label for="telefono">Telefonoa:</label>
+        <label for="telefono">Phone:</label>
         <input type="text" id="telefono" name="telefono" required placeholder="000000000"> <br><br>
-        <label for="emaila">Emaila:</label>
+        <label for="emaila">Email:</label>
         <input type="email" id="emaila" name="emaila" placeholder="xxxxxx@gmail.com" required> <br><br>
-        <label for="jaio_urtea">Jaio Urtea:</label>
+        <label for="jaio_urtea">Year of Birth:</label>
         <input type="date" id="jaio_urtea" name="jaio_urtea" placeholder="0000-00-00" required> <br><br>
 
         <br><br>
 
         <div id="erregistroa">
-            <button id="erregistratuBotoia">Erregistratu</button>
+            <button id="erregistratuBotoia">Sign in</button>
         </div>
 
     </form>
@@ -74,15 +74,15 @@
                     .done(function (erregistroa) {
                         var erregistroa = JSON.parse(erregistroa);
                         if (erregistroa.status == "ok") {
-                            alert("Erregistroa ondo egin da");
+                            alert("The registration was successful!");
                             window.location.href = "../saioaHasi/saioaHasi.php";
                         } else {
-                            alert("Erregistroa ez da ondo egin");
+                            alert("The registration wasn´t successful");
                         }
 
                     })
                     .fail(function () {
-                        alert("Errorea egon da eskaeran: ");
+                        alert("There was an error in the request: ");
                     })
 
 

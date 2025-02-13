@@ -5,13 +5,13 @@ require_once("../db.php");
 $conn = konexioaSortu();
 
 if (!isset($_SESSION['Bezeroa_idBezeroa'])) {
-    echo json_encode(["error" => "Erabiltzailea ez dago saioan."]);
+    echo json_encode(["error" => "User isn´t logged in ."]);
     exit();
 }
 
 $data = json_decode(file_get_contents("php://input"), true);
 if (!$data || empty($data["karritoa"])) {
-    echo json_encode(["error" => "Ez dago produkturik karritoan."]);
+    echo json_encode(["error" => "There isn`t products in the cart."]);
     exit();
 }
 
@@ -27,9 +27,9 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param( $kopurua, $data, $Bezeroa_idBezeroa);
 
 if ($stmt->execute()) {
-    echo json_encode(["success" => "Erosketa gorde da!", "id" => $stmt->insert_id]);
+    echo json_encode(["success" => "The purchase has been saved!", "Bezeroa_idBezeroa" => $stmt->insert_id]);
 } else {
-    echo json_encode(["error" => "Errorea erosketa gordetzean."]);
+    echo json_encode(["error" => "Error saving purchase."]);
 }
 
 $conn->close();

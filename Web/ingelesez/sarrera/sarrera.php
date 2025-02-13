@@ -11,7 +11,7 @@
 
         ?>
         <link rel="stylesheet" href="sarrera.css">
-        <title>Sarrera</title>
+        <title>Entry</title>
 
     </head>
 
@@ -23,29 +23,29 @@
             <h1 id="enpresaIzena">EkoTekno</h1>
 
             <div id="zerAurkitu">
-                <h3 class="sarreraTitulua1">Zer aurkituko duzu EkoTeknon?</h3>
+                <h3 class="sarreraTitulua1">What you will find in EkoTekno?</h3>
 
                 <img src="../ZerAurkitu.jpg" alt="Zer aurkitu argazkia" id="zerAurkituArgazkia" width="200px" height="200px"
                     ;>
                 <ul id="zerAurkituLista">
-                    <li>Ordenagailuak eta osagarriak – Eramangarriak, mahaigaineko PC-ak, monitoreak, teklatuak eta gehiago.
+                    <li>Computers and accessories – Laptops, desktop PCs, monitors, keyboards and more.
                     </li>
-                    <li>Smartphone-ak eta osagarriak – Azken modeloak, fundak, kargagailuak eta gailu adimendunak.
+                    <li>Smartphones and accessories – Latest models, cases, chargers and smart devices.
                     </li>
-                    <li>Gadget-ak eta gailu adimendunak – Smartwatch-ak, entzungailuak, bozgorailu adimendunak eta domotika.
+                    <li>Gadgets and smart devices – Smartwatches, headphones, smart speakers and home automation.
                     </li>
-                    <li>Osagaiak eta gaming-a – Txartel grafikoak, prozesadoreak, gaming-aulkiak eta zure esperientzia
-                        hobetzeko behar duzun guztia.</li>
+                    <li>Components and gaming – Graphics cards, processors, gaming chairs and your experience
+                    Everything you need to improve</li>
                 </ul>
             </div>
             <div id="konpromisoa">
-                <h3 class="sarreraTitulua2">Kalitatearekiko konpromisoa eta arreta pertsonalizatua</h3>
+                <h3 class="sarreraTitulua2">Commitment to quality and personalized attention</h3>
 
                 <img src="../Konpromiso.jpg" alt="Konpromisoa argazkia" id="konpromisoaArgazkia" width="200px"
                     height="200px" ;>
-                <p class="konpromisoaTextua">EkoTekno-n, teknologiaren zaleak gara eta zerbitzu hurbila eta fidagarria
-                    eskaintzea gustatzen zaigu. Zure behar eta aurrekontura egokitutako produktua aurkitzen lagunduko
-                    dizugu. Gure bezeroekin dauzkagun konpromisoa da gure lehentasuna eta zure iritzia gurekin partekatzea. 
+                <p class="konpromisoaTextua">EkoTekno, we are technology enthusiasts, and we love offering a close 
+                    and reliable service. We will help you find the product that best suits your needs and budget. 
+                    Our commitment to our customers is our priority, and we value you sharing your opinion with us. 
                 </p>
 
             </div>

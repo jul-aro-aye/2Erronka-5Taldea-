@@ -60,7 +60,7 @@ $irudiak = [
 
 <head>
     <?php require_once("../head.php"); ?>
-    <title>Produktuak</title>
+    <title>Products</title>
 
 </head>
 
@@ -69,11 +69,11 @@ $irudiak = [
     <div class="content-osoa">
         <h1 id="enpresaIzena">EkoTekno</h1>
         <form id="filtro" method="GET" action="produktuOrria.php">
-            <input type="text" name="izenaBilatu" placeholder="Produktuaren izena bilatu..." /><br>
+            <input type="text" name="izenaBilatu" placeholder="Search product name..." /><br>
 
-            <label for="mota">Mota</label>
+            <label for="mota">Type</label>
             <select id="mota" name="mota">
-                <option value="">Guztiak</option>
+                <option value="">All</option>
                 <?php
                 $motasql = "SELECT DISTINCT mota FROM erronka2.produktua";
                 $motaResult = $conn->query($motasql);
@@ -84,9 +84,9 @@ $irudiak = [
                 ?>
             </select>
 
-            <label for="marka">Marka</label>
+            <label for="marka">Brand</label>
             <select id="marka" name="marka">
-                <option value="">Guztiak</option>
+                <option value="">All</option>
                 <?php
                 $markasql = "SELECT DISTINCT marka FROM erronka2.produktua";
                 $markaResult = $conn->query($markasql);
@@ -113,14 +113,14 @@ $irudiak = [
                         echo "<div class='produktua'>";
                         echo "<img src='" . $produktuIrudi . "' height='100px' width='75px' alt='" . htmlspecialchars($produktuIzena) . "'>";
                         echo "<h3>" . htmlspecialchars($row["izena"]) . "</h3>";
-                        echo "<p>Prezioa: $" . number_format($row["prezioa"], 2) . "</p>";
-                        echo "<button class='gehituSaskira' data-izena='" . htmlspecialchars($row["izena"]) . "' data-prezioa='" . $row["prezioa"] . "'>Gehitu saskira</button>";
+                        echo "<p>Price: $" . number_format($row["prezioa"], 2) . "</p>";
+                        echo "<button class='gehituSaskira' data-izena='" . htmlspecialchars($row["izena"]) . "' data-prezioa='" . $row["prezioa"] . "'>Add to cart</button>";
 
                         echo "</div>";
                     }
                 }
             } else {
-                echo "<p>Ez dago produkturik.</p>";
+                echo "<p>There wasn´t products.</p>";
             }
             ?>
         </div>
@@ -147,11 +147,11 @@ $irudiak = [
             }
 
             $(document).on("click", ".gehituSaskira", function () {
-                let izena = $(this).data("izena");  // Usamos .data() en lugar de .attr()
+                let izena = $(this).data("izena");  
                 let prezioa = parseFloat($(this).data("prezioa"));
 
                 if (!izena || isNaN(prezioa)) {
-                    console.error("Errorea: izena edo prezioa undefined/null");
+                    console.error("Erro: name or price undefined/null");
                     return;
                 }
 

@@ -7,7 +7,7 @@
 
     ?>
 
-    <title>Hornitzaile Bihurtu</title>
+    <title>Become a supplier</title>
 </head>
 
 <body>
@@ -20,20 +20,20 @@
 
 
         <form id="hornitzaileForm">
-            <label for="enpresaIzena">Enpresaren Izena:</label>
+            <label for="enpresaIzena">Business Name:</label><br>
             <input type="text" id="enpresaIzena" name="enpresaIzena" required placeholder="Izena"> <br><br>
-            <label for="kokapena">Kokapena:</label><br>
+            <label for="kokapena">Location:</label><br>
             <input type="text" id="kokapena" name="kokapena" required placeholder="Herria,Herrialdea"> <br><br>
-            <label for="banatzaileKop">Banatzaile Kopurua:</label>
+            <label for="banatzaileKop">Number of distributors:</label><br>
             <input type="number" id="banatzaileKop" name="banatzaileKop" required> <br><br>
-            <label for="telefono">Telefonoa:</label><br>
+            <label for="telefono">Phone:</label><br>
             <input type="text" id="telefono" name="telefono" required placeholder="000000000"> <br><br>
-            <label for="emaila">Emaila:</label><br>
+            <label for="emaila">Email:</label><br>
             <input type="email" id="emaila" name="emaila" placeholder="xxxxxx@gmail.com"> <br><br><br>
 
 
             <div id="hornitzaileBihurtu">
-                <button id="hornitzaileBihurtzekoBotoia">Hornitzaile bihurtu</button>
+                <button id="hornitzaileBihurtzekoBotoia">Become a supplier</button>
             </div>
 
         </form>
@@ -69,15 +69,15 @@
                         .done(function (hornitzailea) {
                             var hornitzailea = JSON.parse(hornitzailea);
                             if (hornitzailea.status == "ok") {
-                                alert("Hornitzaile bihurtu zara!");
+                                alert("You have become a supplier!");
                                 window.location.href = "hornitzaileBihurtu.php";
                             } else {
-                                alert("Hornitzaile bihurtzeko datuak ez dira zuzenak");
+                                alert("Data to become a supplier is incorrect");
                             }
 
                         })
                         .fail(function () {
-                            alert("Errorea egon da eskaeran: ");
+                            alert("There was an error in the request: ");
                         })
 
 

@@ -5,7 +5,7 @@ require_once("../header.php");
 <html>
 
 <head>
-    <title>Ordaindu - Erosketa Berretsi</title>
+    <title>Pay</title>
     <link rel="stylesheet" href="ordaindu.css">
     <?php require_once("../head.php"); ?>
 </head>
@@ -14,11 +14,11 @@ require_once("../header.php");
     <div class="content-osoa">
         <h1 id="enpresaIzena">EkoTekno</h1>
         <br><br>
-        <h2 id="ordainduTitulua">Ordaindu</h2>
+        <h2 id="ordainduTitulua">Pay</h2>
         <div id="ordainketa-edukia"></div>
         <br><br>
         <div id="ordaindu-botoiak">
-            <button id="erosketaBerretsi">Erosketa Berretsi</button>
+            <button id="erosketaBerretsi">Confirm purchase</button>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
@@ -38,7 +38,7 @@ require_once("../header.php");
 
                 ordainketaEdukia.html("");
                 if (karritoa.length === 0) {
-                    ordainketaEdukia.html("<p>Ez dago produkturik karritoan.</p>");
+                    ordainketaEdukia.html("<p>There isn`t products in the cart.</p>");
                     return;
                 }
 
@@ -57,7 +57,7 @@ require_once("../header.php");
                 let karritoa = JSON.parse(localStorage.getItem("karritoa")) || [];
 
                 if (karritoa.length === 0) {
-                    alert("Ez dago produkturik karritoan.");
+                    alert("There isn´t products in the cart.");
                     return;
                 }
 
@@ -69,15 +69,15 @@ require_once("../header.php");
                     .done(function (data) {
                         data = JSON.parse(data);
                         if (data.success) {
-                            alert("Eskerrik asko zure erosketagatik!");
+                            alert("Thank you for your purchase!");
                             localStorage.removeItem("karritoa"); 
                             window.location.href = "produktuOrria.php"; 
                         } else {
-                            alert("Errorea: " + data.error);
+                            alert("Error: " + data.error);
                         }
                     })
                     .fail(function () {
-                        alert("gaizki joan da");
+                        alert("There was an error with the server.");
                     });
 
             };
