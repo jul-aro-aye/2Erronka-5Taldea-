@@ -20,11 +20,11 @@
 
 
         <form id="hornitzaileForm">
-            <label for="enpresaIzena">Enpresaren Izena:</label>
+            <label for="enpresaIzena">Enpresaren Izena:</label><br>
             <input type="text" id="enpresaIzena" name="enpresaIzena" required placeholder="Izena"> <br><br>
             <label for="kokapena">Kokapena:</label><br>
             <input type="text" id="kokapena" name="kokapena" required placeholder="Herria,Herrialdea"> <br><br>
-            <label for="banatzaileKop">Banatzaile Kopurua:</label>
+            <label for="banatzaileKop">Banatzaile Kopurua:</label><br>
             <input type="number" id="banatzaileKop" name="banatzaileKop" required> <br><br>
             <label for="telefono">Telefonoa:</label><br>
             <input type="text" id="telefono" name="telefono" required placeholder="000000000"> <br><br>

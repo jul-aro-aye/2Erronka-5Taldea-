@@ -15,7 +15,7 @@ if (isset($_GET["erabiltzailea"]) && isset($_GET["pasahitza"])) {
     
     if ($result->num_rows > 0) {
         $_SESSION['erabiltzailea'] = $erabiltzailea; 
-        $_SESSION['Bezeroa_idBezeroa'] = $result->fetch_assoc()["idBerezoa"];
+       
         echo json_encode(["kopurua" => 1, "redirect" => "sarrera.php"]); 
     } else {
         echo json_encode(["kopurua" => 0]);

@@ -27,7 +27,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param( $kopurua, $data, $Bezeroa_idBezeroa);
 
 if ($stmt->execute()) {
-    echo json_encode(["success" => "Erosketa gorde da!", "id" => $stmt->insert_id]);
+    echo json_encode(["success" => "Erosketa gorde da!", "idBezeroa" => $stmt->insert_id]);
 } else {
     echo json_encode(["error" => "Errorea erosketa gordetzean."]);
 }
