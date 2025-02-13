@@ -11,9 +11,9 @@ $sql = "SELECT izenburua, textua, data FROM berria";
 $result = $conn->query($sql);
 
 $irudiak = [
-    "EkoTekno aurkezten du bere lehen mugikor ekologikoa" => "../MugikorEkologikoa.jpg",
-    "EkoTekno-k eguzki-kargagailu adimenduna merkaturatu du" => "../Eguzki-kargagailuAdimenduna.jpg",
-    "EkoTekno eta AI: adimen artifizial jasangarria garatzen" => "../AI.jpg",
+    "EkoTekno aurkezten du bere lehen mugikor ekologikoa" => "../CSS+Irudiak/MugikorEkologikoa.jpg",
+    "EkoTekno-k eguzki-kargagailu adimenduna merkaturatu du" => "../CSS+Irudiak/Eguzki-kargagailuAdimenduna.jpg",
+    "EkoTekno eta AI: adimen artifizial jasangarria garatzen" => "../CSS+Irudiak/AI.jpg",
 
 ]
 

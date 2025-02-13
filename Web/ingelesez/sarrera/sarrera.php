@@ -25,7 +25,7 @@
             <div id="zerAurkitu">
                 <h3 class="sarreraTitulua1">What you will find in EkoTekno?</h3>
 
-                <img src="../ZerAurkitu.jpg" alt="Zer aurkitu argazkia" id="zerAurkituArgazkia" width="200px" height="200px"
+                <img src="../CSS+Irudiak/ZerAurkitu.jpg" alt="Zer aurkitu argazkia" id="zerAurkituArgazkia" width="200px" height="200px"
                     ;>
                 <ul id="zerAurkituLista">
                     <li>Computers and accessories – Laptops, desktop PCs, monitors, keyboards and more.
@@ -41,7 +41,7 @@
             <div id="konpromisoa">
                 <h3 class="sarreraTitulua2">Commitment to quality and personalized attention</h3>
 
-                <img src="../Konpromiso.jpg" alt="Konpromisoa argazkia" id="konpromisoaArgazkia" width="200px"
+                <img src="../CSS+Irudiak/Konpromiso.jpg" alt="Konpromisoa argazkia" id="konpromisoaArgazkia" width="200px"
                     height="200px" ;>
                 <p class="konpromisoaTextua">EkoTekno, we are technology enthusiasts, and we love offering a close 
                     and reliable service. We will help you find the product that best suits your needs and budget. 

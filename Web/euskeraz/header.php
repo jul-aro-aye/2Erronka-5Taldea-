@@ -23,10 +23,10 @@ require_once "../saioaHasi/session.php";
             <a href="../saioaHasi/saioaHasi.php"><i class="fa fa-user" id="login"></i></a>
         <?php endif; ?>
         <a href="../sarrera/sarrera.php">
-            <img src="../euskera.png" id="euskera" alt="Euskera">
+            <img src="../CSS+Irudiak/euskera.png" id="euskera" alt="Euskera">
         </a>
         <a href="../../ingelesez/sarrera/sarrera.php">
-            <img src="../ingelesa.jpg" id="ingelesa" alt="Ingelesa">
+            <img src="../CSS+Irudiak/ingelesa.jpg" id="ingelesa" alt="Ingelesa">
         </a>
     </div>
 </div>

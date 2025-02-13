@@ -25,7 +25,7 @@
             <div id="zerAurkitu">
                 <h3 class="sarreraTitulua1">Zer aurkituko duzu EkoTeknon?</h3>
 
-                <img src="../ZerAurkitu.jpg" alt="Zer aurkitu argazkia" id="zerAurkituArgazkia" width="200px" height="200px"
+                <img src="../CSS+Irudiak/ZerAurkitu.jpg" alt="Zer aurkitu argazkia" id="zerAurkituArgazkia" width="200px" height="200px"
                     ;>
                 <ul id="zerAurkituLista">
                     <li>Ordenagailuak eta osagarriak – Eramangarriak, mahaigaineko PC-ak, monitoreak, teklatuak eta gehiago.
@@ -41,7 +41,7 @@
             <div id="konpromisoa">
                 <h3 class="sarreraTitulua2">Kalitatearekiko konpromisoa eta arreta pertsonalizatua</h3>
 
-                <img src="../Konpromiso.jpg" alt="Konpromisoa argazkia" id="konpromisoaArgazkia" width="200px"
+                <img src="../CSS+Irudiak/Konpromiso.jpg" alt="Konpromisoa argazkia" id="konpromisoaArgazkia" width="200px"
                     height="200px" ;>
                 <p class="konpromisoaTextua">EkoTekno-n, teknologiaren zaleak gara eta zerbitzu hurbila eta fidagarria
                     eskaintzea gustatzen zaigu. Zure behar eta aurrekontura egokitutako produktua aurkitzen lagunduko
