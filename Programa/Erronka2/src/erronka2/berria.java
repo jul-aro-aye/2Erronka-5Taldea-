@@ -1,18 +1,40 @@
 package erronka2;
 
-import java.util.Date;
+class Berria {
+    private int idBerria;
+    private String izenburua, testua, data, langilea;
 
-public class berria {
-	private int id_berria;
-	private String izenburua;
-	private String testua;
-	private Date data;
-	
-	public berria(int id_berria, String izenburua, String testua, Date data) {
-		this.id_berria = id_berria;
-		this.izenburua = izenburua;
-		this.testua = testua;
-		this.data = data;
-	}
-	
+    public Berria(int idBerria, String izenburua, String testua, String data, String langilea) {
+        this.idBerria = idBerria;
+        this.izenburua = izenburua;
+        this.testua = testua;
+        this.data = data;
+        this.langilea = langilea;
+    }
+
+    public int getIdBerria() {
+        return idBerria;
+    }
+
+    public String getIzenburua() {
+        return izenburua;
+    }
+
+    public String getTestua() {
+        return testua;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public String getLangilea() {
+        return langilea;
+    }
+
+    @Override
+    public String toString() {
+        return "Berria [idBerria=" + idBerria + ", izenburua=" + izenburua + ", testua=" + testua + ", data=" + data
+                + ", langilea=" + langilea + "]";
+    }
 }
